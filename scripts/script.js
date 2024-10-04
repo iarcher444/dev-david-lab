@@ -14,7 +14,7 @@ $(document).ready(function() {
             score++; // Increment score when the game piece is dropped in the target
             $("#score").text("Score: " + score); // Update the score display
 
-            // Optionally, you can change the position of the target randomly
+            // Change the position of the target randomly
             let newLeft = Math.random() * ($("#game-area").width() - 100); // Random x position
             $(this).css("left", newLeft + "px"); // Update target position
         }
