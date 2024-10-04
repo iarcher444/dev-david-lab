@@ -14,7 +14,9 @@ body {
     background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png'); /* Image of the girl */
     background-size: cover; /* Make sure the image covers the entire div */
     cursor: pointer;
+    z-index: 10; /* Ensure the game piece is on top */
 }
+
 
 /* Target Styling */
 .target {
