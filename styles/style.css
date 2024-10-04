@@ -1,29 +1,31 @@
-$(document).ready(function() {
-    let score = 0;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/vecteezy_background-of-green-grass-field-cartoon-drawing_14572097.jpg'); /* Add a background pattern URL */
+    background-size: cover;
+}
 
-    // Initialize the game piece as draggable
-    $("#game-piece").draggable({
-        revert: "invalid", // If not dropped in the target, revert to original position
-        containment: "#game-area" // Keep the piece within the game area
-    });
+/* Game Piece Styling */
+.game-piece {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png'); /* Image of the girl */
+    background-size: cover; /* Make sure the image covers the entire div */
+    cursor: pointer;
+}
 
-    // Make the target area droppable
-    $(".target").droppable({
-        accept: "#game-piece",
-        drop: function(event, ui) {
-            score++; // Increment score when the game piece is dropped in the target
-            $("#score").text("Score: " + score); // Update the score display
+/* Target Styling */
+.target {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 50px); /* Center target */
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/257286.png'); /* Replace with the butterfly image URL */
+    background-size: cover; /* Make sure the image covers the entire div */
+    background-color: transparent; /* Optional: Ensures no background color */
+    border: none; /* Ensures no border if any */
 
-            // Optionally, you can change the position of the target randomly
-            let newLeft = Math.random() * ($("#game-area").width() - 100); // Random x position
-            $(this).css("left", newLeft + "px"); // Update target position
-        }
-    });
-
-    // Reset the game
-    $("#reset").click(function() {
-        score = 0; // Reset score
-        $("#score").text("Score: " + score); // Update score display
-        $("#game-piece").css({ top: 0, left: 0 }); // Reset position of the game piece
-    });
-});
+}
