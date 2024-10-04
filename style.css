@@ -1,31 +1,31 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/vecteezy_background-of-green-grass-field-cartoon-drawing_14572097.jpg'); 
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/vecteezy_background-of-green-grass-field-cartoon-drawing_14572097.jpg'); /* Add a background pattern URL */
     background-size: cover;
 }
 
-/* Game Piece */
+/* Game Piece Styling */
 .game-piece {
-    width: 150px; 
-    height: 150px; 
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png'); 
-    background-size: cover; 
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png'); /* Image of the girl */
+    background-size: cover; /* Make sure the image covers the entire div */
     cursor: pointer;
 }
 
-/* Target */
+/* Target Styling */
 .target {
     width: 100px;
     height: 100px;
     position: absolute;
     bottom: 20px;
-    left: calc(50% - 50px); 
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/257286.png'); 
-    background-size: cover; 
-    background-color: transparent;
-    border: none;
+    left: calc(50% - 50px); /* Center target */
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/257286.png'); /* Replace with the butterfly image URL */
+    background-size: cover; /* Make sure the image covers the entire div */
+    background-color: transparent; /* Optional: Ensures no background color */
+    border: none; /* Ensures no border if any */
 
 }
