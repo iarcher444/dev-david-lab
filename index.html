@@ -2,67 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch the Butterflies Game</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Butterfly Catch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Butterfly Catch</a>
+            <a class="navbar-brand" href="index.html">Butterfly Catch</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/your-repo-link" target="_blank">Source Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://your-other-apps-link" target="_blank">Other Apps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nu Valid</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" target="repo" href="https://github.com/anunley2025/dev-david">Github repo</a></li>
+                    <li class="nav-item"><a class="nav-link" target="nu" href="https://validator.nu/?doc=https%3A%2F%2Fanunley2025.github.io%2Fdev-david%2F">Check page validity</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col text-center">
-                <h1>Catch the Butterflies!</h1>
-                <p>Drag the butterfly into the target area to score points!</p>
-            </div>
+    <div class="container text-center my-4">
+        <h1>Catch the Butterflies!</h1>
+        <p>Drag the butterfly into the target area to score points!</p>
+        <div id="game-area">
+            <img id="girl" src="img/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png" draggable="true">
+            <img id="butterfly" src="img/257286.png">
         </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <div id="game-area" class="border" style="height: 400px; position: relative;">
-                    <!-- Game Piece (Butterfly) -->
-                    <div id="game-piece" class="game-piece" style="position: absolute; top: 0; left: 0;">
-                        <img src="https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png" alt="Butterfly Game Piece" style="width: 100px; height: 100px;">
-                    </div>
-                    <!-- Target -->
-                    <div id="target" class="target" style="position: absolute; bottom: 20px; left: calc(50% - 50px);">
-                        <img src="https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/257286.png" alt="Target Butterfly" style="width: 100px; height: 100px;">
-                    </div>
-                </div>
-                <p id="score">Score: 0</p>
-                <button id="reset" class="btn btn-danger">Reset Game</button>
-            </div>
-        </div>
+        <div id="score">Score: 0</div>
+        <button type="button" id="reset" class="btn btn-primary mt-3">Reset Game</button>
     </div>
 
-    <footer class="bg-light text-center mt-5 py-3">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+    <script src="scripts/scripts.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <footer class="footer">
+        <p>Copyright © 2024 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
