@@ -1,32 +1,29 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/vecteezy_background-of-green-grass-field-cartoon-drawing_14572097.jpg'); /* Add a background pattern URL */
-    background-size: cover;
-}
+$(document).ready(function() {
+    let score = 0;
 
-/* Game Piece Styling */
-.game-piece {
-    width: 75px; /* Size of the girl */
-    height: 75px; /* Size of the girl */
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png'); /* Image of the girl */
-    background-size: contain; /* Ensure the image fits within the div */
-    background-repeat: no-repeat; /* Prevent image from repeating */
-    cursor: pointer;
-}
+    // Initialize the game piece as draggable
+    $("#game-piece").draggable({
+        revert: "invalid", // If not dropped in the target, revert to original position
+        containment: "#game-area" // Keep the piece within the game area
+    });
 
-/* Target Styling */
-.target {
-    width: 50px; /* Size of the butterfly */
-    height: 50px; /* Size of the butterfly */
-    position: absolute;
-    bottom: 20px;
-    left: calc(50% - 25px); /* Center target */
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/257286.png'); /* Image of the butterfly */
-    background-size: contain; /* Ensure the image fits within the div */
-    background-repeat: no-repeat; /* Prevent image from repeating */
-    background-color: transparent; /* No background color */
-    border: none; /* No border */
-}
+    // Make the target area droppable
+    $(".target").droppable({
+        accept: "#game-piece",
+        drop: function(event, ui) {
+            score++; // Increment score when the game piece is dropped in the target
+            $("#score").text("Score: " + score); // Update the score display
+
+            // Optionally, you can change the position of the target randomly
+            let newLeft = Math.random() * ($("#game-area").width() - 100); // Random x position
+            $(this).css("left", newLeft + "px"); // Update target position
+        }
+    });
+
+    // Reset the game
+    $("#reset").click(function() {
+        score = 0; // Reset score
+        $("#score").text("Score: " + score); // Update score display
+        $("#game-piece").css({ top: 0, left: 0 }); // Reset position of the game piece
+    });
+});
