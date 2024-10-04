@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch The Butterfly</title>
+    <title>Catch the Butterflies Game</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -9,20 +11,20 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Catch The Butterfly!</a>
+            <a class="navbar-brand" href="#">Butterfly Catch</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://iarcher444.github.io/dev-david-lab/" target="_blank">Source Code</a>
+                        <a class="nav-link" href="https://github.com/your-repo-link" target="_blank">Source Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/iarcher444" target="_blank">Other Apps</a>
+                        <a class="nav-link" href="https://your-other-apps-link" target="_blank">Other Apps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://iarcher444.github.io/dev-david-lab/">Nu Valid</a>
+                        <a class="nav-link" href="#">Nu Valid</a>
                     </li>
                 </ul>
             </div>
@@ -32,16 +34,22 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col text-center">
-                <h1>Catch The Butterfly!</h1>
-                <p>Help the girl catch the butterfly and score  some points!</p>
+                <h1>Catch the Butterflies!</h1>
+                <p>Drag the butterfly into the target area to score points!</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col text-center">
-                <div id="game-area" style="height: 400px; position: relative;">
-                    <div id="game-piece" class="game-piece" style="background-color: transparent;"></div>
-                    <div id="target" class="target" style="background-color: transparent;"></div>
+                <div id="game-area" class="border" style="height: 400px; position: relative;">
+                    <!-- Game Piece (Butterfly) -->
+                    <div id="game-piece" class="game-piece" style="position: absolute; top: 0; left: 0;">
+                        <img src="https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png" alt="Butterfly Game Piece" style="width: 100px; height: 100px;">
+                    </div>
+                    <!-- Target -->
+                    <div id="target" class="target" style="position: absolute; bottom: 20px; left: calc(50% - 50px);">
+                        <img src="https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/257286.png" alt="Target Butterfly" style="width: 100px; height: 100px;">
+                    </div>
                 </div>
                 <p id="score">Score: 0</p>
                 <button id="reset" class="btn btn-danger">Reset Game</button>
@@ -50,7 +58,11 @@
     </div>
 
     <footer class="bg-light text-center mt-5 py-3">
-        <p>&copy; Created By Isabella Archer, 2024.</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
