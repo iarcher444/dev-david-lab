@@ -15,7 +15,7 @@ $(document).ready(function() {
             $("#score").text("Score: " + score); // Update the score display
 
             // Optionally, you can change the position of the target randomly
-            let newLeft = Math.random() * ($("#game-area").width() - 50); // Random x position
+            let newLeft = Math.random() * ($("#game-area").width() - 100); // Random x position
             $(this).css("left", newLeft + "px"); // Update target position
         }
     });
@@ -26,4 +26,4 @@ $(document).ready(function() {
         $("#score").text("Score: " + score); // Update score display
         $("#game-piece").css({ top: 0, left: 0 }); // Reset position of the game piece
     });
-});
+})
