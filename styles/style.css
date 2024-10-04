@@ -1,31 +1,39 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/vecteezy_background-of-green-grass-field-cartoon-drawing_14572097.jpg'); /* Add a background pattern URL */
-    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #a8e6cf;
+    color: #333;
 }
 
-/* Game Piece Styling */
-.game-piece {
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/illustration-of-a-girl-catching-butterfly-with-a-net-isolated-on-white-background-cute-kid-enjoying-summer-spring-picture-with-funny-character-vector.png'); /* Image of the girl */
-    background-size: cover; /* Make sure the image covers the entire div */
-    cursor: pointer;
+.navbar {
+    margin-bottom: 20px;
 }
 
-/* Target Styling */
-.target {
+#game-area {
+    width: 600px;
+    height: 400px;
+    border: 2px dashed #333;
+    background: #f0f8ff;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#girl, #butterfly {
     width: 100px;
-    height: 100px;
+    height: auto;
     position: absolute;
-    bottom: 20px;
-    left: calc(50% - 50px); /* Center target */
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/257286.png'); /* Replace with the butterfly image URL */
-    background-size: cover; /* Make sure the image covers the entire div */
-    background-color: transparent; /* Optional: Ensures no background color */
-    border: none; /* Ensures no border if any */
+}
 
+#girl {
+    cursor: grab;
+}
+
+#score {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
 }
