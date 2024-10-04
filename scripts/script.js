@@ -26,4 +26,4 @@ $(document).ready(function() {
         $("#score").text("Score: " + score); // Update score display
         $("#game-piece").css({ top: 0, left: 0 }); // Reset position of the game piece
     });
-})
+});
