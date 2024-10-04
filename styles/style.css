@@ -23,7 +23,7 @@ body {
     position: absolute;
     bottom: 20px;
     left: calc(50% - 50px); /* Center target */
-    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/257286.png'); /* Replace with the butterfly image URL */
+    background-image: url('https://raw.githubusercontent.com/iarcher444/dev-david-lab/refs/heads/main/img/257286.png'); /* Replace with the butterfly image URL */
     background-size: cover; /* Make sure the image covers the entire div */
     background-color: transparent; /* Optional: Ensures no background color */
     border: none; /* Ensures no border if any */
