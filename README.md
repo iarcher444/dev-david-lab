@@ -1,6 +1,6 @@
 # dev-david-lab
 
-As A curious student
+As a curious student
 
 I want to learn how to make more games
 
